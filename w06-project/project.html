@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World weather viewer | CSE 121b - Final Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="styles/project.css">
+</head>
+
+<body>
+    <main id="gridly">
+        <h1 id="title"> *** View weather from around the world ***</h1>
+        <section class="selectors">
+            <div>
+                <label for="cityName">Enter a city:</label>
+                <input class="selectOptions" type="text" id="cityName" name="cityName" value="London" size="20" />
+            </div>
+            <div>
+                <label for="forecastSel">Forcast:</label>
+                <select class="selectOptions" id="forecastSel" title="Choose a forcast option">
+                    <option selected="selected" value=0>Don't display forecast</option>
+                    <option value=1>3 days (every 3 hrs) </option>
+                </select>
+            </div>
+            <div>
+                <label for="tempSel">Temp units:</label>
+                <select class="selectOptions" id="tempSel" title="Temp units">
+                    <option selected="selected" value=0>&#176F</option>
+                    <option value=1>&#176C</option>
+                </select>
+            </div>
+            <div>
+                <label for="presSel">Pressure units:</label>
+                <select class="selectOptions" id="presSel" title="Presure units">
+                    <option selected="selected" value=0>mb</option>
+                    <option value=1>mm Hg</option>
+                    <option value=2>hPa</option>
+                </select>
+            </div>
+            <div>
+                <label for="windSel">Windspeed units:</label>
+                <select class="selectOptions" id="windSel" title="Windspeed units">
+                    <option selected="selected" value=0>mi/hour</option>
+                    <option value=1>km/hour</option>
+                    <option value=2>m/sec</option>
+                </select>
+            </div>
+
+        </section>
+        <section class="grid-main">
+            <div class="container-location">
+                <h3></h3>
+            </div>
+            <div class="container-humidity">
+                <h3></h3>
+            </div>
+            <div class="container-wind">
+                <h3></h3>
+            </div>
+            <div class="container-temperature">
+                <h3></h3>
+            </div>
+            <div class="container-pressure">
+                <h3></h3>
+            </div>
+            <div class="container-description">
+                <p></p>
+            </div>
+            <div class="container-date">
+                <p></p>
+            </div>
+        </section>
+        <div class="block" id="forecast"></div>
+    </main>
+
+    <footer>
+        &copy;<span id="year"></span> 2023 Stephen T. Burgess | CSE 121b - Final Project
+    </footer>
+
+    <script src="scripts/project.js"></script>
+</body>
+
+</html>
