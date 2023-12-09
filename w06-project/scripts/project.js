@@ -17,7 +17,7 @@ let tempUnits;
 
 // async getWeather Function using fetch()
 const getWeather = async (city) => {
-  const respWeather = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}`);
+  const respWeather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}`);
   weatherData = await respWeather.json();
 
   const respForecast = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&cnt=20&APPID=${apiKey}`);
